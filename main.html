@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Emerson Apothegms</title>
+
+
+</head>
+
+<style>
+
+body { 
+  background: #003333;
+  background: -webkit-linear-gradient(to right, #003333, #006633); 
+  background: linear-gradient(to right, #003333, #006633);    
+  }
+
+#title h1 {
+  color: #fffccc;
+  text-align: center;
+  font-family:  "Times New Roman", Times, serif;
+  font-size: 3em;
+}
+
+#title h2 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #00ff99;
+  font-size: 2.5em;
+  margin-top: -36px;
+
+}
+
+#title h3 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #00ff99;
+  font-size: 1.75em;
+  margin-top: -30px;
+
+}
+
+.message {
+  background-color: #ffffcc;
+  text-align: center;
+}
+
+#actualQuote {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+}
+
+#actualSource {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+#quoteBox {
+  width: 60%;
+  margin: auto;
+
+}
+
+.buttons {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.buttons a {
+  padding: 0.5em;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  background-color: #ffffcc;
+}
+
+</style>
+<script>
+var quotes = [
+
+["Nature keeps much on her table, but more in her closet.", "*Ralph Waldo Emerson (Year.1834-Age.31-Journal,Vol.III Page.411)"],
+  
+  
+["The house praises the carpenter.","*Ralph Waldo Emerson (Year.1836-Age.33-Journal,Vol.IV Page.111)"],
+  
+  
+["It is very hard to be simple enough to be good.", "*Ralph Waldo Emerson(Year.1837-Age.34-Journal,Vol.IV Page.337)"],
+  
+  
+["Fancy relates to color, imagination to form.", "*Ralph Waldo Emerson(Year.1838-Age.35-Journal,Vol.V Page37)"],
+
+
+["Not the fact avails, but the use you make of it.", "*Ralph Waldo Emerson(Year.1838-Age.35-Journal,Vol.V Page.44)"],
+
+["We are by nature observers, and so learners.", "*Ralph Waldo Emerson(Year.1838-Age.35-Journal,Vol.V Page.53)"],
+  
+["The devil can quote texts.", "*Ralph Waldo Emerson(Year.1838-Age.35-Journal,Vol.V Page.89)"],
+  
+["Institutions are optical illusions.", "*Ralph Waldo Emerson(Year.1839-Age.35-Journal,Vol.V Page.175)"],
+  
+["If you cannot be free, be as free as you can.", "*Ralph Waldo Emerson(Year.1838-Age.35-Journal,Vol.V Page.120)"],
+  
+["I can do well for weeks with no other society than the partridge and the jay, my daily company.",
+"*Ralph Waldo Emerson(Year.1838-Age.35-Journal,Vol.V Page.133)"],
+
+["Painting seems to be to the eye what dancing is to the body ... ","*Ralph Waldo Emerson(Year.1839-Age.35-Journal,Vol.V Page.175)"],
+
+["Our aim in our writings ought to be to make daylight shine through them.","*Ralph Waldo Emerson(Year.1839-Age.35-Journal,Vol.V Page.198)"],
+
+["Add <i> humanity </i> to the great writers and their spontaneity.","*Ralph Waldo Emerson(Year.1839-Age.35-Journal,Vol.V Page.199)"],
+
+ ["The finite is the foam of the infinite.","*Ralph Waldo Emerson(Year.1839-Age.36-Journal,Vol.V Page.209)"],
+
+["Language is made up of the spoils of all actions, trades, arts, games, of men.","*Ralph Waldo Emerson(Year.1839-Age.36-Journal,Vol.V Page.213)"],
+
+ ["All conversation among literary men is muddy.  ","*Ralph Waldo Emerson(Year.1839-Age.36-Journal,Vol.V Page.256)"],
+
+["Fact is better than fiction if only we could get pure fact.","*Ralph Waldo Emerson(Year.1839-Age.36-Journal,Vol.V Page.298)"],
+
+["The world can never be learned by learning all its details.","*Ralph Waldo Emerson(Year.1839-Age.36-Journal,Vol.V Page.306)"],
+
+["You teach your boy to walk, but he learns to run himself.","*Ralph Waldo Emerson(Year.1839-Age.36-Journal,Vol.V Page.340)"],
+
+["The aim of art is always somewhat better than nature, but the work of art is always inferior to nature.","*Ralph Waldo Emerson(Year.1840-Age.36-Journal,Vol.V Page.376)"],
+
+["Beware when the great God let's loose a new thinker on this planet ... ","*Ralph Waldo Emerson(Year.1840-Age.36-Journal,Vol.V Page.393)"],
+
+["The simplest things are always better than curiosities.","*Ralph Waldo Emerson(Year.1840-Age.37-Journal,Vol.V Page.425)"],
+
+["Truth; Realism. Are you not scared by seeing that Gypsies are more attractive to us than Apostles?  For though we love goodness and not stealing, yet also we love freedom and not preaching.","*Ralph Waldo Emerson(Year.1842-Age.38-Journal,Vol.VI  Page.184)"],
+
+[" ... the majestic and beautiful Necessity ... ","*Ralph Waldo Emerson(Year.1842-88-Journal,Vol.VI Page.185)"],
+
+["Tragedy and comedy always go hand in hand.","*Ralph Waldo Emerson(Year.1843-Age.40-Journal,Vol.VI Page.419)"],
+
+["Be an opener of doors for such as come after thee, and do not try to make the universe a blind alley.","*Ralph Waldo Emerson(Year.1844-Age.41-Journal,Vol.IV Page.525)"],
+
+["<i>Knowledge</i> is the straight line; <i>  Wisdom </i> is the power of the straight line or the Square; <i>Virtue</i> is the power of the Square; or the Solid.","*Ralph Waldo Emerson(Year.1845-Age.42-Journal,Vol.VII Page.114)"],
+
+["Nature never draws the moral, but leaves it for the spectator.  Neither does the painter, the sculptor, nor the poet.","*Ralph Waldo Emerson(Year.1846-Age.42-Journal,Vol.VII Page.190)"],
+
+["Nonsense is only sense deranged, chaos is paradise dislocated, poverty is wealth decomposed; spite, apathy, bad blood, frivolity, only dispersed matter and light.","*Ralph Waldo Emerson(Year.1847-Age.43-Journal,Vol.VII Page.261)"],
+
+["Nature is regardless of the individual ... ","*Ralph Waldo Emerson(Year.1848-Age.44-Journal,Vol.VII Page.466)"],
+
+["The world is a glass dictionary.","*Ralph Waldo Emerson(Year.1848-Age.45-Journal,Vol.VII Page.515)"],
+
+["Things that are natural are never without a certain grace and excellence.","*Ralph Waldo Emerson(Year.1849- Age.45-Journal,Vol.VIII Page.19)"],
+
+["<i>Life</i>. Some of the sweetest hours of life, on retrospect, will be found to have been spent with books.","*Ralph Waldo Emerson(Year.1849-Age.46-Journal,Vol.VII Page.58)"],
+
+["The badness of the times is making death attractive.","*Ralph Waldo Emerson(Year.1850-Age.46-Journal,Vol.VIII Page.112)"],
+
+["Men as naturally make a state as caterpillars a web ... ","*Ralph Waldo Emerson(Year.1850-Age.47-Journal,Vol.VIII Page.120)"],
+
+["Beware of hypocrisy.","*Ralph Waldo Emerson(Year.1856-Age.52-Journal,Vol.IX Page.6)"],
+
+["The classic unfolds: the romantic adds.","*Ralph Waldo Emerson(Year.1856-Age.52-Journal,Vol.IX Page.25)"],
+
+["We never attain a perfect sincerity in our speech unless we feel a degree of tenderness.","*Ralph Waldo Emerson(Year.1857-Age.54-Journal,Vol.IX Page.137)"],
+
+["You must not look at fireflies by daylight.","*Ralph Waldo Emerson(Year.1859-Age.56-Journal,Vol.IX Page.212)"],
+
+["This world belongs to the energetically.","*Ralph Waldo Emerson(Year.1862-Age.58-Journal,Vol.IX Page.367)"],
+
+["<i> Resources or feats. </i> I like people who can do things.","*Ralph Waldo Emerson(Year.1862-Age.59-Journal,Vol.IX Page.421)"],
+
+["Extremes meet, and there is no better example than the haughtiness of humility.","*Ralph Waldo Emerson(Year.1868-Age.64-Journal,Vol.X Page.231)"],
+
+["Reality, however has a sliding floor.","*Ralph Waldo Emerson(Year.1871-Age.68-Journal,Vol.X Page.365)"],
+
+["A man's style is his mind's voice.  Wooden minds have wooden voices.  Truth is shrill as a fife, various as a panharmonium.","*Ralph Waldo Emerson(Year.1862-'72,Age.59-69-Journal,Vol.X   Page.457)"],
+
+["Philosophy is called homesickness of the soul.","*Ralph Waldo Emerson(Year.1862-'72, Age.59-69-Journal,Vol.X    Page.469)"]
+
+];
+
+var index = [];
+var random;
+
+function randomQuote() {
+  random = Math.floor(Math.random() * quotes.length);
+  for (var i = 0; i < quotes.length; i++) {
+    document.getElementById("actualQuote").innerHTML = quotes[random][0];
+    document.getElementById("actualSource").innerHTML = quotes[random][1];
+    return quotes[random];
+  }
+}
+randomQuote();
+
+function tweetQuote() {
+  window.open('https://twitter.com/intent/tweet?text=' + quotes[random], '', 'width=800, height=600, left=400, top=20');
+}
+
+
+
+</script>
+
+
+<body>
+
+  <div class="container-fluid">
+    <div id = "title">
+      <div class= "row">
+
+	    <h1>Random Quote Machine</h1>
+	    <h2>Apothegms from the Journals of</h2>
+	    <h3>Ralph Waldo Emerson</h3>
+    
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id ="quoteBox">
+      <div class="well message text-center">
+          <p id="actualQuote"></p>
+          <p id="actualSource"></p>
+      </div>
+    </div>
+  
+  <div class="buttons">
+    <a class="btn btn-default btn-sm" onclick="tweetQuote()">Tweet</a>
+    <a class="btn btn-default btn-sm" onclick="randomQuote()" id="newQuote">New Quote</a>
+  </div>
+ 
+</body>
+
+</html>
